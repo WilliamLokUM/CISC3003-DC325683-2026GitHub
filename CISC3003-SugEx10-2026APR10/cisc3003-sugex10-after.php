@@ -95,13 +95,13 @@ if ($customerId && isset($customers[$customerId])) {
                     </div>
                     <div class="mdl-card__supporting-text">
                         <?php if ($selectedCustomer) { ?>
-                            <h4><?= $selectedCustomer['firstName'] . ' ' . $selectedCustomer['lastName'] ?></h4>
+                            <h3><?= $selectedCustomer['firstName'] . ' ' . $selectedCustomer['lastName'] ?></h3>
                             <p><strong>Email:</strong> <?= $selectedCustomer['email'] ?></p>
                             <p><strong>University:</strong> <?= $selectedCustomer['university'] ?></p>
                             <p><strong>Address:</strong> <?= $selectedCustomer['address'] . ', ' . $selectedCustomer['city'] . ', ' . $selectedCustomer['state'] . ', ' . $selectedCustomer['country'] . ', ' . $selectedCustomer['zip'] ?></p>
                             <p><strong>Phone:</strong> <?= $selectedCustomer['phone'] ?></p>
                         <?php } else { ?>
-                            <h4>Select a customer to view details.</h4>
+                            <h3>Select a customer to view details.</h3>
                         <?php } ?>
                     </div>    
                   </div>  <div class="mdl-cell mdl-cell--12-col card-lesson mdl-card  mdl-shadow--2dp">

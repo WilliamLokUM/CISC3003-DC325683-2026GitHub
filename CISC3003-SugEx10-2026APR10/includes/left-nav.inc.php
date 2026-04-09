@@ -1,8 +1,8 @@
   <div class="mdl-layout__drawer mdl-color--blue-grey-800 mdl-color-text--blue-grey-50">
        <div class="profile">
-           <img src="images/profile.jpg" class="avatar">
-           <h4>John Locke</h4>           
-           <span>johnlocke@example.com</span>
+            <img src="images/profile.jpg" class="avatar" alt="Profile Picture">
+            <h2>John Locke</h2>         
+            <span>johnlocke@example.com</span>
        </div>
 
        <nav class="mdl-navigation mdl-color-text--blue-grey-300">
