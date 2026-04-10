@@ -63,3 +63,11 @@ main header h4 {
 
 
 .inlinesparkline  {width: 70%;}
+
+footer.custom-footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    color: #333;
+    font-size: 14px;
+}

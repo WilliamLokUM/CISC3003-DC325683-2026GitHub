@@ -1,5 +1,4 @@
 <?php
-
 include 'includes/book-utilities.inc.php';
 
 $customers = readCustomers("data/customers.txt");
@@ -16,13 +15,13 @@ if ($customerId && isset($customers[$customerId])) {
     $selectedCustomer = $customers[$customerId];
     $customerOrders = readOrders($customerId, "data/orders.txt");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>CISC3003 Suggested Exercise 10</title>
+    <title>DC325683 LOK WANG FONG - CISC3003 Suggested Exercise 10</title>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -30,14 +29,11 @@ if ($customerId && isset($customers[$customerId])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <link rel="stylesheet" href="css/material.min.css">
-    
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/demo-styles.css">
     
     <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
-    
     <script src="js/material.min.js"></script>
-    
     <script src="js/jquery.sparkline.2.1.2.js"></script>
     
     <script>
@@ -45,6 +41,7 @@ if ($customerId && isset($customers[$customerId])) {
             $('.inlinesparkline').sparkline('html', {type: 'bar', barColor: '#3366cc'});
         });
     </script>
+
 </head>
 
 <body>
@@ -59,12 +56,12 @@ if ($customerId && isset($customers[$customerId])) {
 
             <div class="mdl-grid">
 
-              <div class="mdl-cell mdl-cell--7-col card-lesson mdl-card  mdl-shadow--2dp">
+              <div class="mdl-cell mdl-cell--7-col card-lesson mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-color--orange">
                   <h2 class="mdl-card__title-text">Customers</h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                    <table class="mdl-data-table  mdl-shadow--2dp">
+                    <table class="mdl-data-table mdl-shadow--2dp">
                       <thead>
                         <tr>
                           <th class="mdl-data-table__cell--non-numeric">Name</th>
@@ -87,9 +84,11 @@ if ($customerId && isset($customers[$customerId])) {
                       </tbody>
                     </table>
                 </div>
-              </div>  <div class="mdl-grid mdl-cell--5-col">
+              </div>
+              
+              <div class="mdl-grid mdl-cell--5-col">
     
-                  <div class="mdl-cell mdl-cell--12-col card-lesson mdl-card  mdl-shadow--2dp">
+                  <div class="mdl-cell mdl-cell--12-col card-lesson mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-color--deep-purple mdl-color-text--white">
                       <h2 class="mdl-card__title-text">Customer Details</h2>
                     </div>
@@ -104,12 +103,14 @@ if ($customerId && isset($customers[$customerId])) {
                             <h3>Select a customer to view details.</h3>
                         <?php } ?>
                     </div>    
-                  </div>  <div class="mdl-cell mdl-cell--12-col card-lesson mdl-card  mdl-shadow--2dp">
+                  </div>
+
+                  <div class="mdl-cell mdl-cell--12-col card-lesson mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title mdl-color--deep-purple mdl-color-text--white">
                       <h2 class="mdl-card__title-text">Order Details</h2>
                     </div>
                     <div class="mdl-card__supporting-text">       
-                        <table class="mdl-data-table  mdl-shadow--2dp">
+                        <table class="mdl-data-table mdl-shadow--2dp">
                           <thead>
                             <tr>
                               <th class="mdl-data-table__cell--non-numeric">Cover</th>
@@ -122,7 +123,7 @@ if ($customerId && isset($customers[$customerId])) {
                                 <?php if (count($customerOrders) > 0) { ?>
                                     <?php foreach ($customerOrders as $order) { ?>
                                     <tr>
-                                      <td class="mdl-data-table__cell--non-numeric"><img src="images/tinysquare/<?= $order['isbn'] ?>.jpg" alt="Cover"></td>
+                                      <td class="mdl-data-table__cell--non-numeric"><img src="images/tinysquare/<?= $order['isbn'] ?>.jpg" alt="Book Cover"></td>
                                       <td class="mdl-data-table__cell--non-numeric"><?= $order['isbn'] ?></td>
                                       <td class="mdl-data-table__cell--non-numeric"><?= $order['title'] ?></td>
                                     </tr>
@@ -136,9 +137,17 @@ if ($customerId && isset($customers[$customerId])) {
                           </tbody>
                         </table>
                     </div>    
-                   </div>  </div>   
-           
-            </div>  </section>
+                   </div>
+               </div>   
+            </div>
+
+            <footer class="custom-footer">
+                CISC3003 Web Programming: DC325683 LOK WANG FONG 2026
+            </footer>
+
+        </section>
     </main>    
-</div>    </body>
+</div>
+          
+</body>
 </html>
